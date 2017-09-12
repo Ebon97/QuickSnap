@@ -23,9 +23,28 @@ namespace CardGames
 			SwinGame.ProcessEvents();
 
 
+
 			if (SwinGame.KeyTyped (KeyCode.vk_SPACE))
 			{
 				myGame.Start (); //gd:update FlipNextCard to Start to indicate the game to start
+			}
+
+			if (myGame.IsStarted) 
+			{
+
+				if (SwinGame.KeyTyped (KeyCode.vk_LSHIFT) && SwinGame.KeyTyped (KeyCode.vk_RSHIFT)) 
+				{
+					SwinGame.LoadSoundEffectNamed("Slap", "slap.wav");
+					SwinGame.PlaySoundEffect ("Slap");
+				}
+				if (SwinGame.KeyTyped (KeyCode.vk_LSHIFT)) {
+					SwinGame.LoadSoundEffectNamed ("Slap", "slap.wav");
+					SwinGame.PlaySoundEffect ("Slap");
+				}
+				if (SwinGame.KeyTyped (KeyCode.vk_RSHIFT)) {
+					SwinGame.LoadSoundEffectNamed ("Slap", "slap.wav");
+					SwinGame.PlaySoundEffect ("Slap");
+				}
 			}
 		}
 
