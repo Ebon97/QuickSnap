@@ -22,9 +22,10 @@ namespace CardGames
 			//Fetch the next batch of UI interaction
 			SwinGame.ProcessEvents();
 
+
 			if (SwinGame.KeyTyped (KeyCode.vk_SPACE))
 			{
-				myGame.FlipNextCard ();
+				myGame.Start (); //gd:update FlipNextCard to Start to indicate the game to start
 			}
 		}
 
